@@ -1,13 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;500&display=swap');
+
+:root {
+  /* COLOR VARIABLES */
+  --color-white-500: #FFFFFF;
+  --color-black-500: #07000F;
+  --color-black-400: rgba(7, 0, 15, 0.7);
+  --color-black-300: rgba(7, 0, 15, 0.4);
+  --color-black-200: rgba(7, 0, 15, 0.1);
+  --color-black-100: rgba(2, 22, 45, 0.05);
+  --color-accent-500: #0067FE;
+  --color-accent-600: #085EDB;
+
+  /* text */
+  --color-text-primary: var(--color-black-500);
+  --color-text-secondary: var(--color-black-400);
+  --color-text-tertiary: var(--color-black-300);
+  --color-text-accent: var(--color-accent-500);
+  --color-text-on-color: var(--color-white-500);
+  /* icons */
+  --color-icon-primary: var(--color-black-500);
+  --color-icon-secondary: var(--color-black-400);
+  --color-icon-tertiary: var(--color-black-300);
+  --color-icon-accent: var(--color-accent-500);
+  --color-icon-on-color: var(--color-white-500);
+  /* backgrounds */
+  --color-bg-primary: var(--color-white-500);
+  --color-bg-neutral: var(--color-black-100);
+  --color-bg-accent: var(--color-accent-500);
+  --color-bg-accent-hover: var(--color-accent-600);
+  /* borders */
+  --color-border-primary: var(--color-black-200);
+  --color-border-primary-hover: var(--color-black-300);
+  --color-border-strong: var(--color-black-500);
+
+  /* TYPOGRAPHICS VARIABLES */
+  /* font-size */
+  --body-default-size: 16px;
+  --body-accent-size: 16px;
+  --caption-size: 14px;
+  --label-size: 14px;
+  /* font-weight */
+  --body-default-weight: 400;
+  --body-accent-weight: 500;
+  --caption-weight: 400;
+  --label-weight: 500;
+  /* line-height */
+  --body-default-height: 150%;
+  --body-accent-height: 100%;
+  --caption-height: 140%;
+  --label-height: 120%;
+  /* letter-spacing */
+  --body-default-spacing: auto;
+  --body-accent-spacing: -1.2%;
+  --caption-spacing: -1%;
+  --label-spacing: -2%;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Roboto Condensed', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', -apple-system, BlinkMacSystemFont, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: 'Fira Code', source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
