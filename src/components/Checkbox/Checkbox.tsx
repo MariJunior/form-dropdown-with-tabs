@@ -8,18 +8,32 @@ interface CheckboxProps {
   id?: string;
   isChecked?: boolean;
   isDisabled?: boolean;
+  withBackground?: boolean;
+  isHovered?: boolean;
+  onClick?: () => void;
 }
 
-export const Checkbox: React.FC<CheckboxProps> = ({ name, id, isChecked, isDisabled }) => {
+export const Checkbox: React.FC<CheckboxProps> = ({ 
+  name, 
+  id, 
+  isChecked, 
+  isDisabled, 
+  withBackground,
+  isHovered,
+  onClick
+}) => {
   const [isCheckedNow, setIsCheckedNow] = useState(isChecked ?? false);
 
-  const handleCheckboxClick: ChangeEventHandler<HTMLInputElement> = () => {
+  const handleCheckboxCheck: ChangeEventHandler<HTMLInputElement> = () => {
     setIsCheckedNow(!isCheckedNow);
+    onClick && onClick();
   }
 
   return (
     <label
-      className={cn(styles.checkbox_item, { 
+      className={cn(styles.checkbox_item, {
+        [styles.hover]: isHovered,
+        [styles.with_background]: withBackground,
         [styles.checked]: isCheckedNow, 
         [styles.disabled]: isDisabled
       })}
@@ -32,9 +46,14 @@ export const Checkbox: React.FC<CheckboxProps> = ({ name, id, isChecked, isDisab
         id={id ?? name} 
         checked={isCheckedNow}
         disabled={isDisabled}
-        onChange={handleCheckboxClick}
+        onChange={handleCheckboxCheck}
       />
-      <IconTick className={styles.check_icon} role="presentation" />
+      <IconTick 
+        className={cn(styles.check_icon, {
+          [styles.visible]: isCheckedNow
+        })} 
+        role="presentation" 
+      />
     </label>
   )
 }

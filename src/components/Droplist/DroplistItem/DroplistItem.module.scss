@@ -1,0 +1,13 @@
+.droplist_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: var(--color-bg-neutral, rgba(2, 22, 45, 0.05));
+  }
+}
