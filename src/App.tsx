@@ -1,5 +1,6 @@
 import './App.scss';
 import { Checkbox } from './components/Checkbox';
+import { Label } from './components/Label';
 import { Tabs } from './components/Tabs';
 import { TabItemBaseProps } from './components/Tabs/types';
 import logo from './logo.svg';
@@ -59,6 +60,11 @@ function App() {
 
         <div className="control-states-list">
           <Tabs tabsList={tabstestData} />
+        </div>
+
+        <div className="control-states-list">
+          <Label text="id 74003" />
+          <Label text="id 74005" canRemove />
         </div>
       </div>
     </div>
