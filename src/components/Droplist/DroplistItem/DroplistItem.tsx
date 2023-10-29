@@ -1,11 +1,9 @@
 import { useState } from 'react';
 import { Checkbox } from "../../Checkbox";
 import styles from './DroplistItem.module.scss';
+import { DroplistItemBaseProps } from './types';
 
-interface DroplistItemProps {
-  label: string;
-  checkboxName: string;
-  id?: string;
+interface DroplistItemProps extends DroplistItemBaseProps {
   isChecked?: boolean;
   isDisabled?: boolean;
   onClick?: () => void;
@@ -19,11 +17,11 @@ export const DroplistItem: React.FC<DroplistItemProps> = ({
   isDisabled,
   onClick
 }) => {
-  const [isCheckedNow, setisCheckedNow] = useState(isChecked ?? false);
+  const [isCheckedNow, setIsCheckedNow] = useState(isChecked ?? false);
   const [isCheckboxHovered, setIsCheckboxHovered] = useState(false);
 
   const handleItemClick = () => {
-    setisCheckedNow(!isCheckedNow);
+    setIsCheckedNow(!isCheckedNow);
     onClick && onClick();
   }
 

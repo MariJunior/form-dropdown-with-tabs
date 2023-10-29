@@ -1,0 +1,106 @@
+@import '../../shared/styles/mixins/visually-hidden.scss';
+
+.dropdown {
+  width: 100%;
+}
+
+.title {
+  color: var(--color-text-primary, #07000F);
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: var(--caption-size);
+  font-style: normal;
+  font-weight: var(--caption-weight);
+  line-height: var(--caption-height);
+  letter-spacing: -0.14px;
+}
+
+.options_wrapper {
+  --border-radius: 12px;
+
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  max-height: 345px;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border-primary, rgba(7, 0, 15, 0.10));
+  background-color: var(--color-bg-primary, #FFFFFF);
+  box-shadow: 
+    0px 4px 8px 0px rgba(0, 0, 0, 0.02), 
+    0px 4px 32px 0px rgba(0, 0, 0, 0.02);
+  box-sizing: border-box;
+
+  &::after {
+    // TODO: по-хорошему ещё предусмотреть исчезновение градиента при долистывании до конца и при отсутствии скролла
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 80px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFFFFF 100%);
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+  }
+
+  &.opened {
+    // TODO: сделать прикольную анимацию открытия
+  }
+}
+
+.tabs {
+  flex-shrink: 0;
+  display: flex;
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.tab_content {
+  display: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-sizing: border-box;
+
+  &.active {
+    display: block;
+  }
+
+  .title {
+    @include visually-hidden;
+  }
+}
+
+.selected_options {
+  border-bottom: 1px solid var(--color-stroke-grey, #E3E6E8);
+
+  .options {
+    margin: 0;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+  }
+
+  .item {
+    list-style: none;
+  }
+}
+
+.all_options {
+  padding-top: 8px;
+  max-height: 248px;
+  overflow-y: scroll;
+  box-sizing: border-box;
+
+  .options {
+    margin: 0;
+    padding-left: 0;
+  }
+
+  .item {
+    list-style: none;
+  }
+}

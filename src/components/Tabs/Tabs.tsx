@@ -6,9 +6,10 @@ import { TabItemBaseProps } from './types';
 interface TabsProps {
   tabsList: TabItemBaseProps[];
   defaultTab?: string;
+  onClick?: () => void;
 }
 
-export const Tabs: React.FC<TabsProps> = ({ tabsList, defaultTab }) => {
+export const Tabs: React.FC<TabsProps> = ({ tabsList, defaultTab, onClick }) => {
   const [activeTab, setActiveTab] = useState(defaultTab || null);
 
   const handleTabClick = (anchor: string) => {

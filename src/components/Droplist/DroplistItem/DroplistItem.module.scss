@@ -2,10 +2,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0;
   padding: 8px 16px;
   width: 100%;
   cursor: pointer;
   transition: background-color 0.2s ease;
+  box-sizing: border-box;
+  text-transform: capitalize;
 
   &:hover {
     background-color: var(--color-bg-neutral, rgba(2, 22, 45, 0.05));
