@@ -1,3 +1,6 @@
+# Status
+***in progress***
+
 # Task and design
 
 Макет Figma: [можно посмотреть тут](https://www.figma.com/file/KdNXHCHVXdqEv45L4XRwn5/%D0%A2%D0%97-%D0%B4%D0%BB%D1%8F-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA%D0%B0-(Shared)?type=design&node-id=0%3A1&mode=design&t=YtdmlCz8p3y5O1GK-1)
